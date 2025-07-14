@@ -1,0 +1,30 @@
+id: useState_essentials
+learningObjectives:
+  - Learn how to use the useState hook in React.
+hints:
+  - The first element of the array returned by useState is the current state.
+    The second is the function to update it.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Now it's time to get our hands dirty with useState, the hook that allows
+              you to add state to your functional components.
+          - text: Picture useState as the magical bag that stores your app's current state
+              and lets you update it whenever you need.
+          - text: "You'll define a piece of state, and useState will return a pair: the
+              current state and a function that updates it."
+          - text: Think of it as having a line of dialogue, "useState lets me say 'Hello
+              World!' and change it to 'Goodbye, Cruel World!' with a click."
+          - text: Excited to create some dynamic components? Let's do this! Just let me know
+              when you're ready to move on.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
