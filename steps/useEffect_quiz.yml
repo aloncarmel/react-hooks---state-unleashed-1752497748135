@@ -1,0 +1,55 @@
+id: useEffect_quiz
+learningObjectives:
+  - Test knowledge about the useEffect hook and its applications.
+hints:
+  - Think about how useEffect is related to React component lifecycle events.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Quiz time! When is the useEffect hook executed in a React component?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - After every render of the component
+          - Before the component is mounted
+          - Only once when the component is first rendered
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Well done! That's completely correct. useEffect runs after every render.
+            - actionId: finish_step
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Oops! That's not when it runs. It gets executed after renders. Try again!
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Almost, but useEffect can also rerun based on dependency changes if you
+                      set it up that way. Give it another shot!
+            - actionId: replay_action
+              params:
+                actionName: quiz
