@@ -1,0 +1,30 @@
+id: global_state_with_useContext
+learningObjectives:
+  - Understand how to manage global state using useContext.
+hints:
+  - Consider checking out how useContext and useReducer can be combined for
+    complex state management at [React
+    Docs](https://reactjs.org/docs/hooks-reference.html#usecontext).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Feeling the state experience yet? Awesome! Let's talk about managing
+              global state with useContext.
+          - text: While useState and useEffect are fantastic, sometimes your app requires a
+              single, centralized state across many components. Enter
+              useContext!
+          - text: useContext provides a way to pass data through the component tree without
+              needing to pass props down manually at every level.
+          - text: Can't wait to see how useContext fits into the puzzle? Sweet! When you're
+              ready, let's march onward.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
