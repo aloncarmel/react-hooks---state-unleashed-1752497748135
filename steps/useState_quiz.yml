@@ -1,0 +1,57 @@
+id: useState_quiz
+learningObjectives:
+  - Test the understanding of the useState hook.
+hints:
+  - Remember, useState returns an array with two elements.
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Alright, here's a quick quiz to test your newfound useState knowledge!
+          - text: What does the useState hook return?
+    - actionId: quiz_message
+      name: quiz
+      params:
+        person: lucca
+        options:
+          - A tuple with a state variable and a function
+          - Just a state variable
+          - A single function to update the state
+trigger:
+  type: chat_form_submitted
+  flowNode:
+    switch:
+      key: ${formSubmission}
+      cases:
+        A:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Bingo! That's the right answer. Keep up the great work!
+            - actionId: finish_step
+        B:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Not quite! Remember, it also returns a function to update the state. Try
+                      again!
+            - actionId: replay_action
+              params:
+                actionName: quiz
+        C:
+          do:
+            - actionId: bot_message
+              params:
+                person: lucca
+                messages:
+                  - text: Close, but no cigar! useState gives you both the state and a function to
+                      amend it. Give it another go!
+            - actionId: replay_action
+              params:
+                actionName: quiz
