@@ -1,0 +1,30 @@
+id: introduction_to_hooks
+learningObjectives:
+  - Understand the purpose and basics of React hooks.
+hints:
+  - Check out the official React documentation on hooks
+    [here](https://reactjs.org/docs/hooks-intro.html).
+startFlow:
+  do:
+    - actionId: bot_message
+      params:
+        person: lucca
+        messages:
+          - text: Welcome to the wonderful world of React Hooks! It's where functional
+              components get their superpowers.
+          - text: Hooks are functions that let you hook into React state and lifecycle
+              features from function components.
+          - text: Why should you learn them? Well, they make your code cleaner, more
+              efficient, and easier to understand.
+          - text: Let's dive into the basics and explore why hooks are a game changer for
+              React developers.
+          - text: When you're ready to dive into the next topic, click the button to
+              proceed.
+    - actionId: ready_message
+      params:
+        person: lucca
+trigger:
+  type: user_ready_response
+  flowNode:
+    do:
+      - actionId: finish_step
