@@ -1,0 +1,34 @@
+id: react_hooks_state_management-jkm4y
+title: React Hooks & State Unleashed
+subtitle: Dive into React Hooks and master state management
+description: >-
+  In this thrilling quest, you'll embark on a journey through the world of React
+  hooks and state management. Marvel at the elegance of hooks as you leverage
+  them to efficiently manage your application's state.
+
+
+  We'll begin with a gentle introduction to React hooks, covering their purpose and the unique advantages they bring to functional components.
+
+
+  Next, we'll dive deep into state management, exploring how hooks like useState and useReducer allow you to maintain dynamic data with ease. We'll also uncover more sophisticated hooks such as useEffect and useContext to manage side effects and global states effectively.
+
+
+  By the end of this quest, you'll be equipped with a robust understanding of how to manage state in your React applications like a pro. Ready to rewrite the rules of your React universe? Let's get started!
+level: intermediate
+duration: 0.75
+skills:
+  - react
+  - javascript
+  - state management
+  - hooks
+  - front-end development
+steps:
+  - introduction_to_hooks
+  - useState_essentials
+  - useState_quiz
+  - understanding_useEffect
+  - useEffect_quiz
+  - global_state_with_useContext
+  - context_and_reducers_question
+type: MODULE
+repository: null
